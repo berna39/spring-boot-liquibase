@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>   
+<?xml version="1.0" encoding="UTF-8"?>  
 <databaseChangeLog
    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -8,15 +8,12 @@
       http://www.liquibase.org/xml/ns/pro 
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">  
 
-    <changeSet author="shango" id="1">
-      <createTable tableName="person">
-         <column name="id" type="INTEGER">
-            <constraints nullable="false" primaryKey="true"  unique="true"/>
-         </column>
-         <column name="name" type="VARCHAR(255)" />
-      </createTable>
-   </changeSet>
-
-   <include file="db/changelog/changelog-v2.xml"/>
-
-</databaseChangeLog> 
+    <changeSet author="shango" id="2">
+        <createTable tableName="todos">
+            <column name="id" type="INTEGER">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="title" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
